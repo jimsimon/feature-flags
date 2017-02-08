@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: user-service
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost/postgres
+    username: postgres
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate.ddl-auto: validate
+
+---
+spring:
+  profiles: container
+  datasource:
+    url: jdbc:postgresql://db/postgres
+  cloud:
+      consul:
+        host: consul
+        port: 8500

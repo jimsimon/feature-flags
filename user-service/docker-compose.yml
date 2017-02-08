@@ -1,0 +1,16 @@
+version: "2"
+services:
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+  consul:
+    image: consul
+    ports:
+      - "8500:8500"
+  pgweb:
+    image: sosedoff/pgweb
+    ports:
+      - "8081:8081"
+  user-service:
+    image: kodingklub/user-service
