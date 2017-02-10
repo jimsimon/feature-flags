@@ -1,0 +1,19 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/polymer test",
+    "build": "node_modules/.bin/polymer build",
+    "start": "node_modules/.bin/polymer serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "polymer-cli": "^0.17.0"
+  }
+}

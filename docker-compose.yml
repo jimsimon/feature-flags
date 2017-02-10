@@ -16,6 +16,13 @@ services:
     image: sosedoff/pgweb
     ports:
       - "8081:8081"
+  ui:
+    image: node:6-alpine
+    volumes:
+          - ./ui:/usr/src/app
+    entrypoint: sh -c "cd /usr/src/app && npm start"
+    ports:
+      - "8080:8080"
   user-service:
     image: kodingklub/user-service
     depends_on:
